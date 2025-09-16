@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build & Test') {
             steps {
+                sh 'mvn wrapper:wrapper'
                 sh './mvnw clean test'
             }
         }
